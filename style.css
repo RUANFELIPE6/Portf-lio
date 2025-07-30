@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  --text-color: white;
+  --bg-color: #0d0d0d;
+  --stroke-color: rgba(255, 255, 255, 0.5);
+  --surface-color: rgba(255, 255, 255, 0.1);
+  --surface-color-hover: rgba(0, 0, 0, 0.02);
+  --highlight-color: rgba(255, 255, 255, 0.2);
+}
+
+body {
+  background-color: var(--bg-color);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+body * {
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
+}
+
+#container {
+  width: 500px;
+  margin: 56px auto 0px;
+  padding: 12px 24px;
+}
+
+#profile {
+  text-align: center;
+  padding: 15px;
+}
+
+#profile img {
+  width: 155px;
+  border-radius: 50%;
+  transition: box-shadow 0.2s ease;
+}
+
+#profile img:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px 5px rgb(102, 102, 102);
+}
+
+#profile p {
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 8px;
+}
+
+#switch {
+  position: relative;
+  width: 64px;
+
+  margin: 4px auto;
+}
+
+#switch button {
+  width: 280px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0%;
+  border-radius: 50%;
+  
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translateY(-50%);
+  
+  animation: slide-back 0.2s;
+}
+
+#switch button:hover {
+  outline: 8px solid var(--highlight-color);
+}
+
+#switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding:  12px 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+ul li a:hover {
+  background: var(--surface-color-hover);
+  border: 1.5px solid var(--text-color);
+}
+
+#social-links {
+  display: flex;
+  gap: 32px;
+  padding: 24px 0;
+  font-size: 24px;
+  justify-content: center;
+}
+
+#social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  transition: background 0.2s;
+  border-radius: 50%;
+}
+
+#social-links a:hover {
+  background: var(--highlight-color);
+  padding: 16px;
+}
+
+footer {
+  padding:24px ;
+  text-align: center;
+  font-size: 14px;
+}
+
+/* animação */
+@keyframes slide-in {
+  from {
+    left: 0;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes slide-back {
+  from {
+    left: 50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+
+/* Fundo animado */
+#particles-js {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-color: #000;
+}
+
+/* Estilo do conteúdo */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+}
+
+.container {
+  padding: 50px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+}
